@@ -3,35 +3,33 @@ package Metodos;
 import Interface.Metodo;
 
 import java.util.Iterator;
-import java.util.List;
-import java.util.Vector;
+import java.util.LinkedList;
 
-public class CustomVector<T> implements Metodo<T> {
-    private List<T> vector = new Vector<T>();
-
+public class CustomLinkedList<T> implements Metodo<T> {
+    private LinkedList<T> linkedList = new LinkedList<T>();
     @Override
     public void add(T el) {
-        vector.add(el);
+        linkedList.addLast(el);
     }
 
     @Override
     public void remove(T el) {
-        vector.remove(el);
+        linkedList.remove(el);
     }
 
     @Override
     public void remove() {
-        throw new UnsupportedOperationException();
+        linkedList.removeLast();
     }
 
     @Override
     public void update(int el, T nuevoEl) {
-        vector.set(el, nuevoEl);
+        linkedList.set(el, nuevoEl);
     }
 
     @Override
     public void iterate() {
-        Iterator value = vector.iterator();
+        Iterator value = linkedList.iterator();
         while (value.hasNext()) {
             System.out.println(value.next());
         }

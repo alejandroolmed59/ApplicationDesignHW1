@@ -19,6 +19,11 @@ public class CustomArrayList<T> implements Metodo<T> {
     }
 
     @Override
+    public void remove() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
     public void update(int el, T nuevoEl) {
         lista.set(el, nuevoEl);
     }
