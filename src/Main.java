@@ -5,10 +5,11 @@ public class Main {
         System.out.println("\nArrayList");
         CustomArrayList<String> arrayList = new CustomArrayList<>();
         arrayList.add("Hola");
-        arrayList.add("Mundo soy");
+        arrayList.add("Mundo");
+        arrayList.add("soy");
         arrayList.add("Jorge");
         arrayList.remove("Mundo soy");
-        arrayList.update(1, "Olmedo");
+        arrayList.update(3, "Marvin");
         arrayList.iterate();
 
 
@@ -60,5 +61,15 @@ public class Main {
         lhs.add("Petunia");
         lhs.remove("Dandelion");
         lhs.iterate(); //Orden PREDECIBLE
+
+        System.out.println("\nTreeSet");
+        CustomTreeSet<Integer> ts = new CustomTreeSet<Integer>();
+        ts.add(10);
+        ts.add(1);
+        ts.add(50);
+        ts.add(40);
+        ts.add(45);
+        ts.remove(40);
+        ts.iterate(); //Los treesets son ordenados por su orden natural, en este caso, ascendiente
     }
 }
