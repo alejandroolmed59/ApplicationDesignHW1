@@ -37,5 +37,6 @@ public class CustomPriorityQueue<T> implements Metodo<T> {
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
+        System.out.println("");
     }
 }
